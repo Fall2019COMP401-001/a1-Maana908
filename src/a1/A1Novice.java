@@ -17,10 +17,10 @@ public class A1Novice {
 			String firstInitial = firstName.charAt(0) + ".";
 			String lastName = scan.next();
 			int totalCartItems = scan.nextInt();
-			double totalPrice = 0.0;
+			double totalPrice = 0.00;
 			
 			for (int j = 0; j < totalCartItems; j++) {
-				double itemTotalPrice = 0.0;
+				double itemTotalPrice = 0.00;
 				int numOfItems = scan.nextInt();
 				String itemName = scan.next();
 				double itemPrice = scan.nextDouble();
