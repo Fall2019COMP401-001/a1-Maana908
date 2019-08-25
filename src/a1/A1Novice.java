@@ -8,7 +8,6 @@ public class A1Novice {
 		
 		Scanner scan = new Scanner(System.in);
 
-		// Your code follows here.
 		
 		int numOfCustomers = scan.nextInt();
 		
@@ -18,7 +17,7 @@ public class A1Novice {
 			String lastName = scan.next();
 			int totalCartItems = scan.nextInt();
 			double totalPrice = 0.00;
-			
+			String priceDouble = String.format("%.2f", totalPrice);
 			for (int j = 0; j < totalCartItems; j++) {
 				double itemTotalPrice = 0.00;
 				int numOfItems = scan.nextInt();
@@ -28,7 +27,6 @@ public class A1Novice {
 					itemTotalPrice += itemPrice;
 				}
 				totalPrice += itemTotalPrice;
-				String priceDouble = String.format("%.2f", totalPrice);
 			}
 			System.out.println(firstInitial + " " + lastName  + ": " + priceDouble);
 		}
