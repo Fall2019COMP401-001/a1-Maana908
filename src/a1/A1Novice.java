@@ -28,8 +28,9 @@ public class A1Novice {
 					itemTotalPrice += itemPrice;
 				}
 				totalPrice += itemTotalPrice;
+				String priceDouble = String.format("%.2f", totalPrice);
 			}
-			System.out.println(firstInitial + " " + lastName  + ": " + totalPrice);
+			System.out.println(firstInitial + " " + lastName  + ": " + priceDouble);
 		}
 		scan.close();
 	}
