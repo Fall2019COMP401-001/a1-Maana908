@@ -71,7 +71,7 @@ public class A1Adept {
 	}
 	
 	public static double smallest (double[] totals) {
-		double smallest = 0.0;
+		double smallest = totals[0];
 		for (int i = 0; i < totals.length; i++) {
 			if (smallest > totals[i]) {
 				smallest = totals[i];
