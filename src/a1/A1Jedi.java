@@ -29,10 +29,14 @@ public class A1Jedi {
 			for (int k = 0; k < totalBought; k++) {
 				numOfItem = scan.nextInt();
 				nameOfItem = scan.next();
+				int alreadyCounted = 0;
 				for (int s = 0; s < shopItems.length; s++) {
 					if (nameOfItem.equals(shopItems[s])) {
 						numOfBought[s] += numOfItem;
-						numOfBuyers[s] += 1;
+						alreadyCounted += 1;
+						if (alreadyCounted <= 1) {
+							numOfBuyers[s] += 1;
+						}
 					}
 				}
 			}
