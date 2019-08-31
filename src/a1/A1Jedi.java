@@ -26,26 +26,25 @@ public class A1Jedi {
 		for (int i = 0; i < numOfCust; i++) {
 			custName[i] = scan.next() + " " + scan.next();
 			int totalBought = scan.nextInt();
+			int alreadyCounted[] = new int[numOfItems];
 			for (int k = 0; k < totalBought; k++) {
-				numOfItem = scan.nextInt();
+				int numinCart = scan.nextInt();
 				nameOfItem = scan.next();
-				int alreadyCounted = 0;
 				for (int s = 0; s < shopItems.length; s++) {
 					if (nameOfItem.equals(shopItems[s])) {
-						numOfBought[s] += numOfItem;
-						alreadyCounted += 1;
-						if (alreadyCounted <= 1) {
+						numOfBought[s] += numinCart;
+						alreadyCounted[s] += 1;
+						if (alreadyCounted[s] == 1) {
 							numOfBuyers[s] += 1;
 						}
 					}
 				}
 			}
+			
 		}
-		
 		scan.close();
-		
 		for (int m = 0; m < numOfItems; m++) {
-			if (numOfBought[m] == 0 || numOfBuyers[m] == 0) {
+			if (numOfBought[m] == 0) {
 				System.out.println("No customers bought " + shopItems[m]);
 			} else {
 				System.out.println (numOfBuyers[m] + " customers bought " + numOfBought[m] + " " + shopItems[m]);
